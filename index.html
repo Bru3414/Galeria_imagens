@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Médias</title>
+    <title>Galeria</title>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="conteiner">
-        <header>
-            <img src="./images/logo.png" alt="chapeu formatura" />
-            <h1>Calculadora de médias</h1>
-        </header>
-        <form id="form-atividade">
-            <input type="text" placeholder="Nome da atividade" id="nome-atividade" required />
-            <input type="number" placeholder="Nota" max="10" min="0" id="nota-atividade" required />
-            <button type="submit">Adicionar +</button>
-        </form>
-        <p id="error">A atividade ja existe!</p>
-        <table cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Nome da atividade</th>
-                    <th>Nota</th>
-                    <th>Aprovado?</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>Média final</td>
-                    <td id="media-nota">---</td>
-                    <td id="media-resultado">---</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <script src="javascript.js"></script>
+    <header>
+        <h1>Galeria de fotos</h1>
+        <button type="button">Nova imagem +</button>
+    </header>
+    <form>
+        <h2>Inserir nova imagem</h2>
+        <input id="url-img" type="url" required placeholder="URL da imagem">
+        <button type="submit">Adicionar</button>
+        <button id="botao-cancelar" type="reset">Cancelar</button>
+    </form>
+    <ul>
+        <li>
+            <img src="./images/foto1.jpg" alt="">
+            <div class="overlay-image-link">
+                <a href="./images/foto1.jpg" target="_blank">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+        <li>
+            <img src="./images/foto2.jpg" alt="">
+            <div class="overlay-image-link">
+                <a href="./images/foto2.jpg" target="_blank">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+        <li>
+            <img src="./images/foto3.jpg" alt="">
+            <div class="overlay-image-link">
+                <a href="./images/foto3.jpg" target="_blank">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+        <li>
+            <img src="./images/foto4.jpg" alt="">
+            <div class="overlay-image-link">
+                <a href="./images/foto4.jpg" target="_blank">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
